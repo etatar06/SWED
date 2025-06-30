@@ -1,0 +1,7 @@
+FROM openjdk:17
+
+WORKDIR /app
+
+COPY target/website-monitor-1.0-jar-with-dependencies.jar website-monitor.jar
+
+ENTRYPOINT ["java", "-jar", "website-monitor.jar"]
